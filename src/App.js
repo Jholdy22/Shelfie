@@ -21,11 +21,7 @@ class App extends Component {
     this.setState({input: e.target.value})
   }
 
-  ClearFields(){
-    document.getElementById("textfield1").value = "";
-    document.getElementById("textfield2").value = "";
-    document.getElementById("textfield3").value = "";
-  }
+
 
   render() {
     console.log(this.state)
@@ -37,11 +33,13 @@ class App extends Component {
         <Form />
         <Header />
         </div>
-        <input type="text" id="textfield1"onChange ={(e) => this.handleInput(e)}/>
-        <input type="text" id="textfield2"onChange ={(e) => this.handleInput(e)}/>
-        <input type="text" id="textfield3"onChange ={(e) => this.handleInput(e)}/>
-        <button type="button" onclick="ClearFields();">Clear</button>
-      </div>
+          <input type="text"  id="myInput"onChange = {(e) => this.handleInput(e)}/>
+          <input type="text"  id="myInput"onChange = {(e) => this.handleInput(e)}/>
+          <input type="text"  id="myInput"onChange = {(e) => this.handleInput(e)}/>
+          <button>Add to Inventory</button>
+          <button>Cancel</button>
+
+        </div>
     );
   }
 }
